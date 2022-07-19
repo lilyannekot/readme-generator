@@ -1,10 +1,10 @@
-# s
+# Hello World!
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
 
-  s
+  This project entailed saying hello to everyone around the world.
 
   ## Table of Contents
 
@@ -17,15 +17,15 @@
 
   ## Usage Information
 
-  s
+  None
 
   ## Contribution Guidelines
 
-  s
+  Everyone is open to contributing!
 
   ## Test Instructions
 
-  s
+  Test away, no further instructions!
 
   ## License
 
@@ -35,6 +35,6 @@
 
   ## Questions
   
-  github.com/s
+  github.com/catsrule
 
-  s
+  cats@helloworld.com

@@ -34,7 +34,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Which license do you want to use?',
-        choices: ['MIT', 'Apache', 'Boost', 'Eclipse', 'ISC', 'No License']
+        choices: ['MIT', 'Apache', 'Eclipse', 'ISC', 'No License']
     },
     {
         type: 'input',
