@@ -14,20 +14,32 @@ const licenseBadge = {
   Boost: '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)',
   Eclipse: '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)',
   ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-  NoLicense: ''
+};
+
+function renderLicenseBadge(licenseBadge) {
+  if (`${response.license}` === licenseOptions) {
+    return (licenseBadge)
+  } else {
+    return ''
+  };
+};
+
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
+const licenseLink = {
+  MIT: 'A short and simple permissive license with conditions only requiring preservation of copyright and license notices.',
+  Apache: 'A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. ',
+  Eclipse: 'A free and open source software license most notably used for the Eclipse IDE and other projects by the Eclipse Foundation. It replaces the Common Public License (CPL) and removes certain terms relating to litigations related to patents.',
+  ISC: 'Removes language that would be considered extraneous according to the Berne Convention.',
 }
 
-function renderLicenseBadge(license) {
-  if (license !== licenseOptions) {
-    return `${licenseBadge}`
+function renderLicenseLink(licenseLink) {
+  if (`${resoonse.license}` === licenseOptions){
+    return(licenseLink)
   } else {
     return ''
   };
 }
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -37,7 +49,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(responses) {
   return `# ${responses.title}
 
-  ${responses.badge}
+  ${renderLicenseBadge}
 
   ##Description
 
