@@ -16,8 +16,8 @@ const licenseBadge = {
   ISC: '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
 };
 
-function renderLicenseBadge(licenseBadge) {
-  if (`${response.license}` === licenseOptions) {
+function renderLicenseBadge(license) {
+  if (`${license}` === licenseOptions) {
     return (licenseBadge)
   } else {
     return ''
@@ -33,8 +33,8 @@ const licenseLink = {
   ISC: 'Removes language that would be considered extraneous according to the Berne Convention.',
 }
 
-function renderLicenseLink(licenseLink) {
-  if (`${resoonse.license}` === licenseOptions){
+function renderLicenseLink(license) {
+  if (`${license}` === licenseOptions) {
     return(licenseLink)
   } else {
     return ''
@@ -43,43 +43,52 @@ function renderLicenseLink(licenseLink) {
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  if (`${license}` === licenseOptions) {
+    return `##[License](#license)
+    This application is covered under the following license: ${licenseOptions}`
+  } else {
+    return ''
+  };
+} 
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(responses) {
   return `# ${responses.title}
 
-  ${renderLicenseBadge}
+  ${renderLicenseBadge(responses.license)}
 
-  ##Description
+  ## Description
 
   ${responses.description}
 
-  ##Table of Contents
+  ## Table of Contents
 
   - [Description](#description)
-  - [Usage Information](#usage-info)
+  - [Usage Information](#usage-information)
   - [Contribution Guidelines](#contribution-guidelines)
   - [Test Instructions](#test-instructions)
+  - [License](#license)
   - [Questions](#questions)
 
-  ##Usage Information
+  ## Usage Information
 
   ${responses.usage}
 
-  ##Contribution Guidelines
+  ## Contribution Guidelines
 
   ${responses.contribution}
 
-  ##Test Instructions
+  ## Test Instructions
 
   ${responses.test}
 
-  ##License
+  ## License
 
+  ${renderLicenseSection(responses.license)}
+  ${renderLicenseLink(responses.license)}
 
-
-  ##Questions
+  ## Questions
   
   github.com/${responses.github}
   ${responses.email}`
