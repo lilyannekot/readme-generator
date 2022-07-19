@@ -2,7 +2,7 @@
 
 ## Project Summary
 
-The following project entailed creating a command-line application that quickly and easily generates a [ready-to-use README file](https://github.com/lilyannekot/readme-generator). 
+The following project entailed creating a [command-line application](https://github.com/lilyannekot/readme-generator) that quickly and easily generates a [ready-to-use README file](https://drive.google.com/file/d/1vnbIEl9RdzTYh6wyFDLlV2OB1G2BtnQK/view?usp=sharing). 
 
 ## Table of Contents
 
@@ -55,4 +55,5 @@ ${renderLicenseBadge(responses.license)}
 
 * [GitHub](https://github.com/lilyannekot)
 * [Project Website](https://github.com/lilyannekot/readme-generator)
+* [Project Demonstration Video](https://drive.google.com/file/d/1vnbIEl9RdzTYh6wyFDLlV2OB1G2BtnQK/view?usp=sharing)
 * [LinkedIn](https://www.linkedin.com/in/lilykot/)
